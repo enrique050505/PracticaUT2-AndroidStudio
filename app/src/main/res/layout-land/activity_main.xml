@@ -23,10 +23,9 @@
 
         <ImageView
             android:id="@+id/imageView_LogoChampions"
-            android:layout_width="356dp"
-            android:layout_height="135dp"
-            android:layout_marginStart="13sp"
-            android:layout_marginTop="25sp"
+            android:layout_width="350dp"
+            android:layout_height="115dp"
+            android:layout_marginStart="150sp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/logo_champions_blanco" />
 
@@ -46,13 +45,13 @@
             android:text="Correo Electrónico*"
             android:textAlignment="viewStart"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.216"
+            app:layout_constraintHorizontal_bias="0.211"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.169" />
+            app:layout_constraintVertical_bias="0.162" />
 
         <TextView
             android:id="@+id/textView_Usuario"
@@ -62,13 +61,13 @@
             android:text="Usuario*"
             android:textAlignment="viewStart"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.159"
+            app:layout_constraintHorizontal_bias="0.192"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.372" />
+            app:layout_constraintVertical_bias="0.363" />
 
         <TextView
             android:id="@+id/textView_Contraseña"
@@ -78,127 +77,127 @@
             android:text="Contraseña*"
             android:textAlignment="viewStart"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.159"
+            app:layout_constraintHorizontal_bias="0.199"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.576" />
+            app:layout_constraintVertical_bias="0.574" />
 
         <EditText
             android:id="@+id/editTextTextEmailAddress"
-            android:layout_width="256dp"
-            android:layout_height="45dp"
+            android:layout_width="350dp"
+            android:layout_height="35dp"
             android:backgroundTint="#7900FF"
             android:ems="10"
             android:fontFamily="sans-serif-thin"
             android:inputType="textEmailAddress"
             android:textColor="@color/white"
-            android:textSize="22sp"
+            android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.445"
+            app:layout_constraintHorizontal_bias="0.452"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.26" />
+            app:layout_constraintVertical_bias="0.262" />
 
         <TextView
             android:id="@+id/textView_TituloPaginaInicio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="237dp"
+            android:layout_height="36dp"
             android:fontFamily="sans-serif-light"
             android:text="ÚNETE AL JUEGO"
+            android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="30sp"
+            android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.031" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <EditText
             android:id="@+id/editText_Usuario"
-            android:layout_width="256dp"
-            android:layout_height="45dp"
+            android:layout_width="350dp"
+            android:layout_height="35dp"
             android:backgroundTint="#7900FF"
             android:ems="10"
             android:fontFamily="sans-serif-thin"
             android:inputType="text"
             android:textColor="@color/white"
-            android:textSize="22sp"
+            android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.445"
+            app:layout_constraintHorizontal_bias="0.452"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.468" />
+            app:layout_constraintVertical_bias="0.448" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
-            android:layout_width="256dp"
-            android:layout_height="45dp"
+            android:layout_width="350dp"
+            android:layout_height="35dp"
             android:backgroundTint="#7900FF"
             android:ems="10"
             android:fontFamily="sans-serif-thin"
             android:inputType="textPassword"
             android:textColor="@color/white"
-            android:textSize="22sp"
+            android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.445"
+            app:layout_constraintHorizontal_bias="0.452"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.669" />
+            app:layout_constraintVertical_bias="0.698" />
 
         <CheckBox
             android:id="@+id/checkBox_TerminosYPrivacidad"
-            android:layout_width="285dp"
-            android:layout_height="36dp"
+            android:layout_width="214dp"
+            android:layout_height="15dp"
             android:backgroundTint="#7900FF"
             android:buttonTint="#7900FF"
             android:fontFamily="sans-serif-medium"
             android:text=" Acepto Términos y Privacidad"
             android:textColor="@color/white"
-            android:textSize="17sp"
+            android:textSize="12sp"
             app:buttonIconTint="#7900FF"
-            app:buttonIconTintMode="screen"
+            app:buttonIconTintMode="add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.773" />
+            app:layout_constraintVertical_bias="0.798" />
 
         <Button
             android:id="@+id/button_EmpezarJugar"
-            android:layout_width="213dp"
-            android:layout_height="47dp"
+            android:layout_width="188dp"
+            android:layout_height="34dp"
             android:background="#7900FF"
             android:fontFamily="sans-serif-medium"
-            android:text="   Empieza a Jugar"
-            android:textSize="17sp"
+            android:text="    Empieza a Jugar"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.916" />
+            app:layout_constraintVertical_bias="0.961" />
 
         <ImageView
             android:id="@+id/imageView_IconoBalon"
-            android:layout_width="41dp"
+            android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="178dp"
+            android:layout_marginBottom="1dp"
             app:layout_constraintBottom_toBottomOf="@+id/button_EmpezarJugar"
             app:layout_constraintEnd_toEndOf="@+id/button_EmpezarJugar"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/button_EmpezarJugar"
             app:layout_constraintTop_toTopOf="@+id/button_EmpezarJugar"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/balon" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
