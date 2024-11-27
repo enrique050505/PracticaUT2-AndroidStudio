@@ -17,14 +17,14 @@
         <ImageView
             android:id="@+id/imageView_fondoChampions"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="125dp"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/fondo_champions" />
 
         <ImageView
             android:id="@+id/imageView_LogoChampions"
             android:layout_width="350dp"
-            android:layout_height="115dp"
+            android:layout_height="110dp"
             android:layout_marginStart="150sp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/logo_champions_blanco" />
@@ -86,15 +86,15 @@
             app:layout_constraintVertical_bias="0.574" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/editText_CorreoElectronico"
             android:layout_width="350dp"
-            android:layout_height="35dp"
+            android:layout_height="33dp"
             android:backgroundTint="#7900FF"
             android:ems="10"
             android:fontFamily="sans-serif-thin"
             android:inputType="textEmailAddress"
             android:textColor="@color/white"
-            android:textSize="13sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.452"
@@ -121,30 +121,30 @@
         <EditText
             android:id="@+id/editText_Usuario"
             android:layout_width="350dp"
-            android:layout_height="35dp"
+            android:layout_height="33dp"
             android:backgroundTint="#7900FF"
             android:ems="10"
             android:fontFamily="sans-serif-thin"
             android:inputType="text"
             android:textColor="@color/white"
-            android:textSize="13sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.452"
+            app:layout_constraintHorizontal_bias="0.451"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.448" />
+            app:layout_constraintVertical_bias="0.455" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/editText_Contraseña"
             android:layout_width="350dp"
-            android:layout_height="35dp"
+            android:layout_height="33dp"
             android:backgroundTint="#7900FF"
             android:ems="10"
             android:fontFamily="sans-serif-thin"
             android:inputType="textPassword"
             android:textColor="@color/white"
-            android:textSize="13sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.452"
@@ -154,8 +154,8 @@
 
         <CheckBox
             android:id="@+id/checkBox_TerminosYPrivacidad"
-            android:layout_width="214dp"
-            android:layout_height="15dp"
+            android:layout_width="220dp"
+            android:layout_height="17dp"
             android:backgroundTint="#7900FF"
             android:buttonTint="#7900FF"
             android:fontFamily="sans-serif-medium"
@@ -173,16 +173,17 @@
         <Button
             android:id="@+id/button_EmpezarJugar"
             android:layout_width="188dp"
-            android:layout_height="34dp"
+            android:layout_height="36dp"
             android:background="#7900FF"
             android:fontFamily="sans-serif-medium"
             android:text="    Empieza a Jugar"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.499"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.961" />
+            app:layout_constraintVertical_bias="0.973" />
 
         <ImageView
             android:id="@+id/imageView_IconoBalon"

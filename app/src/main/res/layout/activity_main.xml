@@ -87,7 +87,7 @@
             app:layout_constraintVertical_bias="0.576" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/editText_CorreoElectronico"
             android:layout_width="256dp"
             android:layout_height="45dp"
             android:backgroundTint="#7900FF"
@@ -137,7 +137,7 @@
             app:layout_constraintVertical_bias="0.468" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/editText_Contraseña"
             android:layout_width="256dp"
             android:layout_height="45dp"
             android:backgroundTint="#7900FF"
@@ -179,12 +179,13 @@
             android:background="#7900FF"
             android:fontFamily="sans-serif-medium"
             android:text="   Empieza a Jugar"
+            android:onClick="iniciarApp"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.916" />
+            app:layout_constraintVertical_bias="0.934" />
 
         <ImageView
             android:id="@+id/imageView_IconoBalon"
