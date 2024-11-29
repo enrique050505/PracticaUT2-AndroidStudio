@@ -15,30 +15,30 @@
 
         <ImageView
             android:id="@+id/imageView_ImagenFondo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/champions_campo" />
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_menu"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="50dp"
             android:background="#020E78"
             android:theme="?attr/actionOverflowMenuStyle" />
 
         <ImageView
             android:id="@+id/imageView_IconoMenu"
-            android:layout_width="50dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="300dp"
-            android:layout_marginTop="10sp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="600dp"
+            android:layout_marginTop="7sp"
             app:srcCompat="@drawable/balon_champions" />
 
         <ImageButton
             android:id="@+id/imageButton_Salir"
-            android:layout_width="70dp"
-            android:layout_height="75dp"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
             android:backgroundTint="#020E78"
             android:onClick="salirAplicacion"
             android:scaleType="fitXY"
@@ -46,19 +46,19 @@
 
         <ImageView
             android:id="@+id/imageView_logoChampions"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_marginStart="125sp"
-            android:layout_marginTop="110sp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="280sp"
+            android:layout_marginTop="55sp"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/logo_champions_blanco" />
 
         <ImageView
             android:id="@+id/imageView_trofeoChampions"
-            android:layout_width="200dp"
-            android:layout_height="260dp"
-            android:layout_marginStart="90sp"
-            android:layout_marginTop="275sp"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:layout_marginStart="225sp"
+            android:layout_marginTop="140sp"
             app:srcCompat="@drawable/trofeo_champions" />
 
     </FrameLayout>

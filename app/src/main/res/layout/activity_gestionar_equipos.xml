@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GestionarEquipos">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView_FondoGestionEquipos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/champions_campo" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_gestion_equipos"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#020E78"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+        <ImageButton
+            android:id="@+id/imageButton_BotonPaginaPrincipal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#020E78"
+            android:onClick="volverPantallaPrincipal"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/casa" />
+
+        <ImageView
+            android:id="@+id/imageView_IconoMenuGestionEquiops"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/balon_champions" />
+    </FrameLayout>
+</LinearLayout>

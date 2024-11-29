@@ -1,32 +1,30 @@
 package com.example.proyectout2;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
-
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.widget.Toolbar;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Inicio extends AppCompatActivity {
+public class GestionarEquipos extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_inicio);
+        setContentView(R.layout.activity_gestionar_equipos);
 
-        Toolbar toolbar = findViewById(R.id.toolbar_menu);
+        Toolbar toolbar = findViewById(R.id.toolbar_gestion_equipos);
         setSupportActionBar(toolbar);
 
         if(getSupportActionBar() != null){
@@ -40,8 +38,8 @@ public class Inicio extends AppCompatActivity {
         });
     }
 
-    public void salirAplicacion(View view) {
-        Intent i = new Intent(Inicio.this, MainActivity.class);
+    public void volverPantallaPrincipal(View view){
+        Intent i = new Intent(GestionarEquipos.this, Inicio.class);
         startActivity(i);
     }
 
@@ -54,11 +52,7 @@ public class Inicio extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-       if(item.getItemId()==R.id.gestion_equipos){
-            Intent intentEquipos = new Intent(this, GestionarEquipos.class);
-            startActivity(intentEquipos);
-            return true;
-        }else if(item.getItemId()==R.id.gestion_jugadores){
+        if(item.getItemId()==R.id.gestion_jugadores){
             Intent intentJugadores = new Intent(this, GestionJugadores.class);
             startActivity(intentJugadores);
             return true;

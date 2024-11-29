@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/gestion_equipos"
+        android:title="Gestión Equipos" />
+    <item
+        android:id="@+id/gestion_jugadores"
+        android:title="Gestión Jugadores" />
+    <item
+        android:id="@+id/simular_partidos"
+        android:title="Simular Partidos" />
+    <item
+        android:id="@+id/clasificacion"
+        android:title="Clasificación" />
+</menu>
