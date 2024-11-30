@@ -7,6 +7,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -16,7 +20,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class GestionarEquipos extends AppCompatActivity {
+
+    EditText editTextNombreEquipo;
+    EditText editTextPaisEquipo;
+    ListView listaEquipos;
+    ArrayList<String> equipos;
+    ArrayList<String> paises;
+    ArrayList<String> listaCompleta;
+    ArrayAdapter<String> adaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,24 +38,142 @@ public class GestionarEquipos extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_gestionar_equipos);
 
+        editTextNombreEquipo = findViewById(R.id.editTextNombreEquipo);
+        editTextPaisEquipo = findViewById(R.id.editTextPais);
+        listaEquipos = findViewById(R.id.ListView_listaEquipos);
+
         Toolbar toolbar = findViewById(R.id.toolbar_gestion_equipos);
         setSupportActionBar(toolbar);
-
-        if(getSupportActionBar() != null){
-            getSupportActionBar().setDisplayShowTitleEnabled(false);
-        }
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        equipos = new ArrayList<>();
+        paises = new ArrayList<>();
+
+        cargarEquipos();
+
+        listaCompleta = new ArrayList<>();
+
+        for(int i=0; i<equipos.size(); i++){
+            String linea = String.format("%-38s %s", equipos.get(i), paises.get(i));
+            listaCompleta.add(linea);
+        }
+
+        adaptador = new ArrayAdapter<>(this, R.layout.item_equipos_lista, R.id.textView_NombreEquipo, listaCompleta);
+
+        listaEquipos.setAdapter(adaptador);
+        listaEquipos.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+
+        listaEquipos.setOnItemClickListener((parent, view, position, id) -> {
+            String equipoSeleccionado = equipos.get(position);
+            String paisSeleccionado = paises.get(position);
+
+            editTextNombreEquipo.setText(equipoSeleccionado);
+            editTextPaisEquipo.setText(paisSeleccionado);
+        });
+
     }
 
     public void volverPantallaPrincipal(View view){
         Intent i = new Intent(GestionarEquipos.this, Inicio.class);
         startActivity(i);
     }
+
+    public void cargarEquipos(){
+        equipos.add("FC Barcelona");
+        paises.add("España");
+
+        equipos.add("Real Madrid");
+        paises.add("España");
+
+        equipos.add("Liverpool");
+        paises.add("Inglaterra");
+
+        equipos.add("AC Milan");
+        paises.add("Italia");
+
+        equipos.add("Bayern Múnich");
+        paises.add("Alemania");
+
+        equipos.add("Borussia Dortmund");
+        paises.add("Alemania");
+
+        equipos.add("Manchester City");
+        paises.add("Inglaterra");
+
+        equipos.add("Inter de Milán");
+        paises.add("Italia");
+
+        equipos.add("Bayer Leverkusen");
+        paises.add("Alemania");
+
+        equipos.add("Atlético de Madrid");
+        paises.add("España");
+    }
+
+    public void editarEquipo(View view){
+        String equipo = editTextNombreEquipo.getText().toString();
+        String pais = editTextPaisEquipo.getText().toString();
+
+        if(!equipo.isEmpty() && !pais.isEmpty()){
+            int indice = listaEquipos.getCheckedItemPosition();
+
+            if(indice != ListView.INVALID_POSITION){
+                equipos.set(indice, equipo);
+                paises.set(indice, pais);
+
+                listaCompleta.set(indice, String.format("%-38s %s", equipos.get(indice), paises.get(indice)));
+
+                editTextPaisEquipo.setText("");
+                editTextNombreEquipo.setText("");
+
+                adaptador.notifyDataSetChanged();
+                Toast.makeText(this, "Equipo editado", Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(this, "Selecciona un equipo para editarlo", Toast.LENGTH_SHORT).show();
+            }
+        }else{
+            Toast.makeText(this, "Campos vacios, selecciona algún equipo", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void añadirEquipo(View view){
+        String equipo = editTextNombreEquipo.getText().toString();
+        String pais = editTextPaisEquipo.getText().toString();
+
+        if(!equipo.isEmpty() && !pais.isEmpty()){
+            equipos.add(equipo);
+            paises.add(pais);
+            listaCompleta.add(String.format("%-38s %s", equipo, pais));
+            editTextPaisEquipo.setText("");
+            editTextNombreEquipo.setText("");
+            adaptador.notifyDataSetChanged();
+            Toast.makeText(this, "Equipo añadido correctamente", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "Completa los 2 campos", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void eliminarEquipo(View view){
+        int indice = listaEquipos.getCheckedItemPosition();
+        if(indice != ListView.INVALID_POSITION){
+            equipos.remove(indice);
+            paises.remove(indice);
+            listaCompleta.remove(indice);
+            editTextPaisEquipo.setText("");
+            editTextNombreEquipo.setText("");
+            adaptador.notifyDataSetChanged();
+            Toast.makeText(this, "Equipo eliminado", Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(this, "No has seleccionado ningun equipo. Selecciona un equipo para eliminar", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
