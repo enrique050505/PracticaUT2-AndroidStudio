@@ -1,11 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".GestionJugadores">
 
-</LinearLayout>
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:id="@+id/imageView_FondoGestionarJugadores"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/fondo_champions_gestionar" />
+
+    <!-- Contenedor principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Barra de herramientas -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_gestion_jugadores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#020E78"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <ImageButton
+                android:id="@+id/imageButton_BotonSalirGestionEquipos"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#020E78"
+                android:contentDescription="Volver atrás"
+                android:onClick="volverPantallaPrincipal"
+                android:scaleType="fitXY"
+                android:src="@drawable/casa" />
+
+            <ImageView
+                android:id="@+id/imageView_FotoMenuGestionEquipos"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:contentDescription="Logo Champions"
+                android:src="@drawable/balon_champions" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Fila de botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <ImageButton
+                android:id="@+id/imageButton_Barcelona"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="#020E78"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/barcelona" />
+
+            <ImageButton
+                android:id="@+id/imageButton_RealMadrid"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="#020E78"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/real_madrid" />
+
+            <ImageButton
+                android:id="@+id/imageButton_Liverpool"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="#020E78"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/liverpool" />
+
+            <ImageButton
+                android:id="@+id/imageButton_Bayern"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="#020E78"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/bayern" />
+
+            <ImageButton
+                android:id="@+id/imageButton_City"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="#020E78"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/city" />
+
+        </LinearLayout>
+
+        <!-- Otra fila de botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <ImageButton
+                android:id="@+id/imageButton_Dortmund"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="#020E78"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/dortmund" />
+
+            <ImageButton
+                android:id="@+id/imageButton_Inter"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="#020E78"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/inter" />
+
+            <ImageButton
+                android:id="@+id/imageButton_Leverkusen"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="#020E78"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/leverkusen" />
+
+            <ImageButton
+                android:id="@+id/imageButton_Milan"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="#020E78"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/milan" />
+
+            <ImageButton
+                android:id="@+id/imageButton_Milan2"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="#020E78"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/atletico" />
+        </LinearLayout>
+
+        <!-- Lista de jugadores -->
+        <ListView
+            android:id="@+id/listViewJugadores"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:divider="#7900FF"
+            android:dividerHeight="3dp" />
+
+        <!-- Campos de texto para editar jugador -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/editTextNombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Nombre"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/editTextDorsal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Dorsal"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editTextPosicion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Posicion"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <!-- Botones de acción -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/imageButtonAñadir"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="#6500C5"
+                android:contentDescription="Añadir jugador"
+                android:onClick="añadirJugador"
+                android:scaleType="fitXY"
+                android:src="@drawable/anadir" />
+
+            <ImageButton
+                android:id="@+id/imageButtonEliminar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="#6500C5"
+                android:contentDescription="Eliminar jugador"
+                android:onClick="eliminarJugador"
+                android:scaleType="fitXY"
+                android:src="@drawable/borrar" />
+
+            <ImageButton
+                android:id="@+id/imageButtonEditar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="#6500C5"
+                android:contentDescription="Editar jugador"
+                android:onClick="editarJugador"
+                android:scaleType="fitXY"
+                android:src="@drawable/editar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

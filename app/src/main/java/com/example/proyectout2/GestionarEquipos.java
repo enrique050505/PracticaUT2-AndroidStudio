@@ -1,6 +1,5 @@
 package com.example.proyectout2;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -147,33 +146,54 @@ public class GestionarEquipos extends AppCompatActivity {
         String pais = editTextPaisEquipo.getText().toString();
 
         if(!equipo.isEmpty() && !pais.isEmpty()){
-            equipos.add(equipo);
-            paises.add(pais);
-            listaCompleta.add(String.format("%-38s %s", equipo, pais));
-            editTextPaisEquipo.setText("");
-            editTextNombreEquipo.setText("");
-            adaptador.notifyDataSetChanged();
-            Toast.makeText(this, "Equipo añadido correctamente", Toast.LENGTH_SHORT).show();
+            boolean existe = false;
+
+            for(int i=0; i<equipos.size(); i++){
+                if(equipos.get(i).equalsIgnoreCase(equipo) && paises.get(i).equalsIgnoreCase(pais)) {
+                    existe = true;
+                }
+            }
+            if(existe){
+                Toast.makeText(this, "El equipo ya existe. Introduzca uno diferente", Toast.LENGTH_SHORT).show();
+            }else{
+                equipos.add(equipo);
+                paises.add(pais);
+                listaCompleta.add(String.format("%-38s %s", equipo, pais));
+                editTextPaisEquipo.setText("");
+                editTextNombreEquipo.setText("");
+                adaptador.notifyDataSetChanged();
+                Toast.makeText(this, "Equipo añadido correctamente", Toast.LENGTH_SHORT).show();
+            }
         }else{
             Toast.makeText(this, "Completa los 2 campos", Toast.LENGTH_SHORT).show();
         }
     }
 
     public void eliminarEquipo(View view){
-        int indice = listaEquipos.getCheckedItemPosition();
-        if(indice != ListView.INVALID_POSITION){
-            equipos.remove(indice);
-            paises.remove(indice);
-            listaCompleta.remove(indice);
-            editTextPaisEquipo.setText("");
-            editTextNombreEquipo.setText("");
-            adaptador.notifyDataSetChanged();
-            Toast.makeText(this, "Equipo eliminado", Toast.LENGTH_SHORT).show();
-        }else {
-            Toast.makeText(this, "No has seleccionado ningun equipo. Selecciona un equipo para eliminar", Toast.LENGTH_SHORT).show();
-        }
-    }
+        String equipo = editTextNombreEquipo.getText().toString();
+        String pais = editTextPaisEquipo.getText().toString();
 
+        if(!equipo.isEmpty() && !pais.isEmpty()){
+            int indice = listaEquipos.getCheckedItemPosition();
+
+            if(indice != ListView.INVALID_POSITION){
+                if(equipos.get(indice).equalsIgnoreCase(equipo) && paises.get(indice).equalsIgnoreCase(pais)){
+                    equipos.remove(indice);
+                    paises.remove(indice);
+                    listaCompleta.remove(indice);
+                    editTextPaisEquipo.setText("");
+                    editTextNombreEquipo.setText("");
+                    adaptador.notifyDataSetChanged();
+                    Toast.makeText(this, "Equipo eliminado correctamente", Toast.LENGTH_SHORT).show();
+                }
+            }else{
+                Toast.makeText(this, "Selecciona un equipo para eliminarlo", Toast.LENGTH_SHORT).show();
+            }
+        }else{
+            Toast.makeText(this, "Selecciona un equipo para eliminarlo", Toast.LENGTH_SHORT).show();
+        }
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
