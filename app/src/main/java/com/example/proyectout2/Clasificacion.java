@@ -117,7 +117,26 @@ public class Clasificacion extends AppCompatActivity {
        }
     }
 
+    public void editarEquipoClasificacion(View view){
+        String nombreEquipo = editTextNombreEquipo.getText().toString();
+        String posicion = editTextPosicionEquipo.getText().toString();
+        String puntos = editTextPuntosEquipo.getText().toString();
 
+        if(!nombreEquipo.isEmpty() && !posicion.isEmpty() && !puntos.isEmpty()){
+           int indice = clasificacion.getCheckedItemPosition();
+           if(indice != ListView.INVALID_POSITION){
+               String equipoEditado = String.format("%sº %s - %s", posicion, nombreEquipo, puntos);
+               clasificacionEquipos.set(indice, equipoEditado);
+               adaptadorClasificacion.notifyDataSetChanged();
+               editTextPuntosEquipo.setText("");
+               editTextNombreEquipo.setText("");
+               editTextPosicionEquipo.setText("");
+               Toast.makeText(this, "Equipo editado en la clasificación correctamente", Toast.LENGTH_SHORT).show();
+           }else{
+               Toast.makeText(this, "Selecciona un equipo para editarlo de la clasificación", Toast.LENGTH_SHORT).show();
+           }
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
