@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Proyect UT2</string>
+    <string name="unetealjuego">JOIN THE GAME</string>
+    <string name="correoElectronico">Email*</string>
+    <string name="usuario">User*</string>
+    <string name="contraseña">Passwrod*</string>
+    <string name="aceptarTerminos"> I Accept Terms and Privacy</string>
+    <string name="empiezaAJugar"> Start to Play</string>
+    <string name="gestionEquipos">Manegement of Teams</string>
+    <string name="gestionJugadores">Manegement of Players</string>
+    <string name="clasificacion">Classification</string>
+    <string name="nombreJugador">Name</string>
+    <string name="dorsalJugador">Number</string>
+    <string name="posicionJugador">Position</string>
+    <string name="nombreCabeceraEquipo">Name</string>
+    <string name="paisCabeceraEquipo">Country</string>
+    <string name="nombreEquipo">Team Name</string>
+    <string name="paisEquipo">Country Name</string>
+    <string name="posicionEquipo">Position</string>
+    <string name="nombreEquipoClasificacion">Name</string>
+    <string name="puntosEquipo">Points</string>
+    <string name="posicionEquipoEdit">Position</string>
+    <string name="nombreEquipoClasificacionEdit">Name</string>
+    <string name="puntosEquipoEdit">Points</string>
+</resources>

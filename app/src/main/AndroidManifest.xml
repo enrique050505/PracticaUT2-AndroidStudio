@@ -16,7 +16,7 @@
             android:name=".GestionarEquipos"
             android:exported="false" />
         <activity
-            android:name=".ClasificacionEquipos"
+            android:name=".Clasificacion"
             android:exported="false" />
         <activity
             android:name=".SimularPartidos"

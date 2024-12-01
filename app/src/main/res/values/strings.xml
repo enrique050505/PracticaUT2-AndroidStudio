@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Proyecto UT2</string>
+    <string name="unetealjuego">ÚNETE AL JUEGO</string>
+    <string name="correoElectronico">Correo Eléctronico*</string>
+    <string name="usuario">Usuario*</string>
+    <string name="contraseña">Contraseña*</string>
+    <string name="aceptarTerminos"> Acepto Términos y Privacidad</string>
+    <string name="empiezaAJugar"> Empieza a Jugar</string>
+    <string name="gestionEquipos">Gestión de Equipos</string>
+    <string name="gestionJugadores">Gestión de Jugadores</string>
+    <string name="clasificacion">Clasificación</string>
+    <string name="nombreJugador">Nombre</string>
+    <string name="dorsalJugador">Dorsal</string>
+    <string name="posicionJugador">Posición</string>
+    <string name="nombreCabeceraEquipo">Nombre</string>
+    <string name="paisCabeceraEquipo">País</string>
+    <string name="nombreEquipo">Nombre del Equipo</string>
+    <string name="paisEquipo">País del Equipo</string>
+    <string name="posicionEquipo">Posición</string>
+    <string name="nombreEquipoClasificacion">Nombre</string>
+    <string name="puntosEquipo">Puntos</string>
+    <string name="posicionEquipoEdit">Posición</string>
+    <string name="nombreEquipoClasificacionEdit">Nombre</string>
+    <string name="puntosEquipoEdit">Puntos</string>
 </resources>

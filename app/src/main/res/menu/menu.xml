@@ -3,14 +3,11 @@
 
     <item
         android:id="@+id/gestion_equipos"
-        android:title="Gestión Equipos" />
+        android:title="@string/gestionEquipos" />
     <item
         android:id="@+id/gestion_jugadores"
-        android:title="Gestión Jugadores" />
-    <item
-        android:id="@+id/simular_partidos"
-        android:title="Simular Partidos" />
+        android:title="@string/gestionJugadores" />
     <item
         android:id="@+id/clasificacion"
-        android:title="Clasificación" />
+        android:title="@string/clasificacion" />
 </menu>

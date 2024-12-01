@@ -50,16 +50,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"
+            android:layout_height="0dp"
+            android:layout_weight="0.75"
             android:orientation="horizontal"
             android:weightSum="5">
 
             <ImageButton
                 android:id="@+id/imageButton_Barcelona"
                 android:layout_width="0dp"
-                android:layout_height="75dp"
-                android:layout_weight="1"
+                android:layout_height="42dp"
+                android:layout_weight="0.5"
                 android:background="#020E78"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/barcelona" />
@@ -67,8 +67,8 @@
             <ImageButton
                 android:id="@+id/imageButton_RealMadrid"
                 android:layout_width="0dp"
-                android:layout_height="75dp"
-                android:layout_weight="1"
+                android:layout_height="42dp"
+                android:layout_weight="0.5"
                 android:background="#020E78"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/real_madrid" />
@@ -76,8 +76,8 @@
             <ImageButton
                 android:id="@+id/imageButton_Liverpool"
                 android:layout_width="0dp"
-                android:layout_height="75dp"
-                android:layout_weight="1"
+                android:layout_height="42dp"
+                android:layout_weight="0.5"
                 android:background="#020E78"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/liverpool" />
@@ -85,8 +85,8 @@
             <ImageButton
                 android:id="@+id/imageButton_Bayern"
                 android:layout_width="0dp"
-                android:layout_height="75dp"
-                android:layout_weight="1"
+                android:layout_height="42dp"
+                android:layout_weight="0.5"
                 android:background="#020E78"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/bayern" />
@@ -94,27 +94,17 @@
             <ImageButton
                 android:id="@+id/imageButton_City"
                 android:layout_width="0dp"
-                android:layout_height="75dp"
-                android:layout_weight="1"
+                android:layout_height="42dp"
+                android:layout_weight="0.5"
                 android:background="#020E78"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/city" />
 
-        </LinearLayout>
-
-        <!-- Otra fila de botones -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:orientation="horizontal"
-            android:weightSum="5">
-
             <ImageButton
                 android:id="@+id/imageButton_Dortmund"
                 android:layout_width="0dp"
-                android:layout_height="75dp"
-                android:layout_weight="1"
+                android:layout_height="42dp"
+                android:layout_weight="0.5"
                 android:background="#020E78"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/dortmund" />
@@ -122,8 +112,8 @@
             <ImageButton
                 android:id="@+id/imageButton_Inter"
                 android:layout_width="0dp"
-                android:layout_height="75dp"
-                android:layout_weight="1"
+                android:layout_height="42dp"
+                android:layout_weight="0.5"
                 android:background="#020E78"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/inter" />
@@ -131,8 +121,8 @@
             <ImageButton
                 android:id="@+id/imageButton_Leverkusen"
                 android:layout_width="0dp"
-                android:layout_height="75dp"
-                android:layout_weight="1"
+                android:layout_height="42dp"
+                android:layout_weight="0.5"
                 android:background="#020E78"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/leverkusen" />
@@ -140,8 +130,8 @@
             <ImageButton
                 android:id="@+id/imageButton_Milan"
                 android:layout_width="0dp"
-                android:layout_height="75dp"
-                android:layout_weight="1"
+                android:layout_height="42dp"
+                android:layout_weight="0.5"
                 android:background="#020E78"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/milan" />
@@ -149,19 +139,22 @@
             <ImageButton
                 android:id="@+id/imageButton_Atleti"
                 android:layout_width="0dp"
-                android:layout_height="75dp"
-                android:layout_weight="1"
+                android:layout_height="42dp"
+                android:layout_weight="0.5"
                 android:background="#020E78"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/atletico" />
+
         </LinearLayout>
+
+        <!-- Otra fila de botones -->
 
         <!-- Lista de jugadores -->
         <ListView
             android:id="@+id/listViewJugadores"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3.5"
+            android:layout_weight="1.6"
             android:divider="#7900FF"
             android:dividerHeight="3dp" />
 
@@ -169,7 +162,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05"
+            android:layout_weight="0.02"
             android:orientation="horizontal"
             android:padding="16dp">
 
@@ -211,15 +204,16 @@
         <!-- Botones de acción -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1.15"
+            android:gravity="center"
             android:orientation="horizontal"
-            android:padding="16dp"
-            android:gravity="center">
+            android:padding="16dp">
 
             <ImageButton
                 android:id="@+id/imageButton_AñadirJugador"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="#6500C5"
                 android:onClick="añadirJugador"
                 android:scaleType="fitXY"
@@ -227,8 +221,8 @@
 
             <ImageButton
                 android:id="@+id/imageButton_EliminarJugador"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="#6500C5"
                 android:onClick="eliminarJugador"
                 android:scaleType="fitXY"
@@ -236,8 +230,8 @@
 
             <ImageButton
                 android:id="@+id/imageButton_EditarJugador"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="#6500C5"
                 android:onClick="editarJugador"
                 android:scaleType="fitXY"

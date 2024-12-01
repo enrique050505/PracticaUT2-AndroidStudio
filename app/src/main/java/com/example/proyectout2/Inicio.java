@@ -1,7 +1,6 @@
 package com.example.proyectout2;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,7 +12,6 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.widget.Toolbar;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -63,12 +61,8 @@ public class Inicio extends AppCompatActivity {
             startActivity(intentJugadores);
             return true;
         }else if(item.getItemId()==R.id.clasificacion){
-            Intent intentClasificacion = new Intent(this, ClasificacionEquipos.class);
+            Intent intentClasificacion = new Intent(this, Clasificacion.class);
             startActivity(intentClasificacion);
-            return true;
-        }else if(item.getItemId()==R.id.simular_partidos) {
-            Intent intentSimularPartidos = new Intent(this, SimularPartidos.class);
-            startActivity(intentSimularPartidos);
             return true;
         }else{
             return super.onOptionsItemSelected(item);

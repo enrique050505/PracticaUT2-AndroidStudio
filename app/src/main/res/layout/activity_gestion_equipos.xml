@@ -58,7 +58,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Nombre"
+                android:text="@string/nombreCabeceraEquipo"
                 android:textColor="#C0C0C0"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -67,8 +67,8 @@
                 android:id="@+id/textViewPaisEquipo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="País"
+                android:layout_weight="0.6"
+                android:text="@string/paisCabeceraEquipo"
                 android:textColor="#C0C0C0"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -95,9 +95,9 @@
                 android:layout_weight="1"
                 android:backgroundTint="#7900FF"
                 android:fontFamily="sans-serif-medium"
-                android:hint="Nombre del equipo"
+                android:hint="@string/nombreEquipo"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white"/>
+                android:textColorHint="@color/white" />
 
             <EditText
                 android:id="@+id/editTextPais"
@@ -106,9 +106,9 @@
                 android:layout_weight="1"
                 android:backgroundTint="#7900FF"
                 android:fontFamily="sans-serif-medium"
-                android:hint="País"
+                android:hint="@string/paisEquipo"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white"/>
+                android:textColorHint="@color/white" />
         </LinearLayout>
 
         <LinearLayout
@@ -130,7 +130,7 @@
             <ImageButton
                 android:id="@+id/imageButton_EliminarEquipo"
                 android:layout_width="82dp"
-                android:layout_height="82dp"
+                android:layout_height="79dp"
                 android:backgroundTint="#7900FF"
                 android:onClick="eliminarEquipo"
                 android:scaleType="fitXY"

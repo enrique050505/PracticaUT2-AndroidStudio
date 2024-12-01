@@ -35,7 +35,7 @@ public class GestionarEquipos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_gestionar_equipos);
+        setContentView(R.layout.activity_gestion_equipos);
 
         editTextNombreEquipo = findViewById(R.id.editTextNombreEquipo);
         editTextPaisEquipo = findViewById(R.id.editTextPais);
@@ -209,12 +209,8 @@ public class GestionarEquipos extends AppCompatActivity {
             startActivity(intentJugadores);
             return true;
         }else if(item.getItemId()==R.id.clasificacion){
-            Intent intentClasificacion = new Intent(this, ClasificacionEquipos.class);
+            Intent intentClasificacion = new Intent(this, Clasificacion.class);
             startActivity(intentClasificacion);
-            return true;
-        }else if(item.getItemId()==R.id.simular_partidos) {
-            Intent intentSimularPartidos = new Intent(this, SimularPartidos.class);
-            startActivity(intentSimularPartidos);
             return true;
         }else{
             return super.onOptionsItemSelected(item);
