@@ -168,6 +168,21 @@ public class GestionJugadores extends AppCompatActivity {
             }
         });
     }
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle datos) {
+        datos.putStringArrayList("jugadores",jugadores);
+        super.onSaveInstanceState(datos);
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle datos) {
+
+        ArrayList<String> jugadores=datos.getStringArrayList("jugadores");
+       mostrarJugadores(jugadores);
+        super.onRestoreInstanceState(datos);
+
+    }
 
     public void cargarJugadores(){
         jugadoresBarcelona.add("Lewandowski - Dorsal: 9 - Posición: DC");
