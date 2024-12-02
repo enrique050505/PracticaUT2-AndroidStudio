@@ -103,7 +103,7 @@
             android:id="@+id/ListView_Clasificacion"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.5" />
+            android:layout_weight="0.25" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -122,10 +122,10 @@
                 android:textColorHint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.284"
+                app:layout_constraintHorizontal_bias="0.267"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.148" />
+                app:layout_constraintVertical_bias="0.106" />
 
             <EditText
                 android:id="@+id/editText_NombreEquipo"
@@ -141,7 +141,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.157" />
+                app:layout_constraintVertical_bias="0.106" />
 
             <EditText
                 android:id="@+id/editText_PuntosEquipo"
@@ -155,10 +155,10 @@
                 android:textColorHint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.735"
+                app:layout_constraintHorizontal_bias="0.741"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.148" />
+                app:layout_constraintVertical_bias="0.106" />
 
             <ImageButton
                 android:id="@+id/imageButton_Añadir"

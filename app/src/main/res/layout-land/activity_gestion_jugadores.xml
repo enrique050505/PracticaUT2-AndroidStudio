@@ -212,8 +212,8 @@
 
             <ImageButton
                 android:id="@+id/imageButton_AñadirJugador"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
                 android:background="#6500C5"
                 android:onClick="añadirJugador"
                 android:scaleType="fitXY"
@@ -221,8 +221,8 @@
 
             <ImageButton
                 android:id="@+id/imageButton_EliminarJugador"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="70dp"
+                android:layout_height="65dp"
                 android:background="#6500C5"
                 android:onClick="eliminarJugador"
                 android:scaleType="fitXY"
@@ -230,8 +230,8 @@
 
             <ImageButton
                 android:id="@+id/imageButton_EditarJugador"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
                 android:background="#6500C5"
                 android:onClick="editarJugador"
                 android:scaleType="fitXY"
